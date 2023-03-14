@@ -504,6 +504,7 @@ public class AwesomeNotifications:
     
     @objc public func didFinishLaunch(_ application: UIApplication) {
         
+        _originalNotificationCenterDelegate = UNUserNotificationCenter.current().delegate
         UNUserNotificationCenter.current().delegate = self
         
         RefreshSchedulesReceiver()
